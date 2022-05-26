@@ -1,0 +1,11 @@
+banner Welcome to first step of Reconnaissance
+echo "Please input domain name"
+read a 
+echo "\n\n Result of NSLOOKUP" > filename1.txt
+nslookup $a >> filename1.txt
+echo "\n\n Result of WHOIS" >> filename1.txt
+whois $a >> filename1.txt
+echo "\n\n Result of SUBLISTER" >> filename1.txt
+sublist3r -d $a >> filename1.txt
+echo "\n\n Result of THEHARVESTER" >> filename1.txt
+theHarvester -d $a -l 100 -b google >> filename1.txt
